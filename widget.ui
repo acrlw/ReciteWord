@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>602</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>YaHei Consolas Hybrid</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>ReciteWord</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="2">
+    <widget class="QLabel" name="qsbSpeed">
+     <property name="text">
+      <string>语速：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="9">
+    <widget class="QPushButton" name="btnAddWord">
+     <property name="text">
+      <string>添加</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>s</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="9">
+    <widget class="QPushButton" name="btnStart">
+     <property name="text">
+      <string>开始</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="9">
+    <widget class="QPushButton" name="btnDeleteWord">
+     <property name="text">
+      <string>删除</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="9">
+    <widget class="QPushButton" name="btnStop">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>停止</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>读单词次数：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="qleAddWord"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="qsbSpeed_2">
+     <property name="text">
+      <string>添加单词：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QSpinBox" name="spEveryWord">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>8</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="9">
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+   <item row="0" column="6">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>单词间隔：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QSpinBox" name="spReadTimes">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>4</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QSpinBox" name="spSpeedVoice">
+     <property name="minimum">
+      <number>-50</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="9">
+    <widget class="QPushButton" name="btnAddbyTxt">
+     <property name="text">
+      <string>从txt文件中导入单词</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnAddWord</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>AddWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>381</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>213</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStart</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>ReadWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>213</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>213</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDeleteWord</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>DeleteWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStop</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>StopRead()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAddbyTxt</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>AddByTxt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>AddWord()</slot>
+  <slot>ReadWord()</slot>
+  <slot>DeleteWord()</slot>
+  <slot>StopRead()</slot>
+  <slot>AddByTxt()</slot>
+ </slots>
+</ui>
